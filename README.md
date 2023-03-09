@@ -41,15 +41,75 @@ ensure that both models ‘learn’ together gradually.
 
 ## Dataset
 
-TODO
+The dataset used to train the discriminator model
+came from the Comprehensive Cars Dataset, which
+includes 136,726 total images of vehicles from
+different makes, models, years, colors, and angles.
+The original authors of this dataset primarily
+intended for this data to be used in classification
+and attribute prediction problems, so the dataset
+needed to be filtered in order to contain images of a
+consistent angle and position.
+
+#### Example of images included in dataset
+![fDemo](GAN_Proj/GAN-Vehicles/images/datasetEXMPL.png)
+
+In order to allow for a reasonable total model run
+time (~1-2 hours), the dataset was reduced to 1324
+images of front-facing vehicles of different makes,
+models, and colors. All 1324 were utilized as
+training data due to the nature of how the
+discriminator model trains, it does not require a test
+dataset to confirm its effectiveness.
 
 ## Results
+Because of the nature of the output that the GAN
+produces, it is difficult to objectively calculate the
+overall effectiveness of the generator and
+discriminator model. For this project and model
+type, the method used to evaluate the produced
+images will be a subjective analysis of the output
+images, comparing them to real images.
+Other methods exist for calculating the quality of
+the generated images, such as calculating the
+Inception Score using the Inception v3 pre-trained
+model, however these objective methods rely on
+multiple classes and don't work well with a
+small-scale single class GAN used in this project.
+Multiple tests were conducted with various image
+resolutions as well as model characteristics, and the
+model effectiveness was determined based on how
+closely output images resemble some real images.
 
---64px
+Based on the table above, the results show a steady
+improvement from epochs 1-300, with a distinct
+front windshield and grille becoming visible. The
+GAN appears to become stagnant after this, with
+the final 200 epochs making little visible progress.
 
---96px
+#### 64x64 pixel output example
+![64px](GAN_Proj/GAN-Vehicles/images/64pxDEMO.png)
 
---128px
+Based on the table above, the results show a steady
+improvement from epochs 1-300, with a distinct
+front windshield and grille becoming visible. The
+GAN appears to become stagnant after this, with
+the final 200 epochs making little visible progress.
+
+#### 96x96 pixel output example
+![96px](GAN_Proj/GAN-Vehicles/images/96pxDEMO.png)
+
+The table above shows another relatively successful
+model configuration, with an outline of a white car
+becoming visible at epoch 200.
+
+#### 128x128 pixel output example
+![128px](GAN_Proj/GAN-Vehicles/images/128pxDEMO.png)
+
+In the table above, a visible vehicle outline begins
+to appear at epoch 190, however the model begins
+to stagnate in later epochs, producing similar or
+lower quality images than before.
 
 ## Conclusion
 
