@@ -52,7 +52,7 @@ needed to be filtered in order to contain images of a
 consistent angle and position.
 
 #### Example of images included in dataset
-![fDemo](GAN_Proj/GAN-Vehicles/images/datasetEXMPL.png)
+![fDemo](GAN-Vehicles/images/datasetEXMPL.png)
 
 In order to allow for a reasonable total model run
 time (~1-2 hours), the dataset was reduced to 1324
@@ -88,7 +88,7 @@ GAN appears to become stagnant after this, with
 the final 200 epochs making little visible progress.
 
 #### 64x64 pixel output example
-![64px](GAN_Proj/GAN-Vehicles/images/64pxDEMO.png)
+![64px](GAN-Vehicles/images/64pxDEMO.png)
 
 Based on the table above, the results show a steady
 improvement from epochs 1-300, with a distinct
@@ -97,14 +97,14 @@ GAN appears to become stagnant after this, with
 the final 200 epochs making little visible progress.
 
 #### 96x96 pixel output example
-![96px](GAN_Proj/GAN-Vehicles/images/96pxDEMO.png)
+![96px](GAN-Vehicles/images/96pxDEMO.png)
 
 The table above shows another relatively successful
 model configuration, with an outline of a white car
 becoming visible at epoch 200.
 
 #### 128x128 pixel output example
-![128px](GAN_Proj/GAN-Vehicles/images/128pxDEMO.png)
+![128px](GAN-Vehicles/images/128pxDEMO.png)
 
 In the table above, a visible vehicle outline begins
 to appear at epoch 190, however the model begins
