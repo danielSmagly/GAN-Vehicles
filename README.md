@@ -1,7 +1,7 @@
 ## Creating Vehicle Images with Generative Adversarial Networks
 
 ## Abstract
-Generative Adversarial Networks (GANs) are a very
+Generative Adversarial Networks (GANs) are an
 interesting topic in the field of machine learning, they
 provide the possibility for artificially generating
 images, video, text, and audio. The development of a
@@ -51,8 +51,8 @@ and attribute prediction problems, so the dataset
 needed to be filtered in order to contain images of a
 consistent angle and position.
 
-#### Example of images included in dataset
-![fDemo](GAN-Vehicles/images/datasetEXMPL.png)
+### Example of images included in dataset
+![fDemo](images/datasetEXMPL.png)
 
 In order to allow for a reasonable total model run
 time (~1-2 hours), the dataset was reduced to 1324
@@ -87,8 +87,8 @@ front windshield and grille becoming visible. The
 GAN appears to become stagnant after this, with
 the final 200 epochs making little visible progress.
 
-#### 64x64 pixel output example
-![64px](GAN-Vehicles/images/64pxDEMO.png)
+### 64x64 pixel output example
+![64px](images/64pxDEMO.png)
 
 Based on the table above, the results show a steady
 improvement from epochs 1-300, with a distinct
@@ -96,15 +96,15 @@ front windshield and grille becoming visible. The
 GAN appears to become stagnant after this, with
 the final 200 epochs making little visible progress.
 
-#### 96x96 pixel output example
-![96px](GAN-Vehicles/images/96pxDEMO.png)
+### 96x96 pixel output example
+![96px](images/96pxDEMO.png)
 
 The table above shows another relatively successful
 model configuration, with an outline of a white car
 becoming visible at epoch 200.
 
-#### 128x128 pixel output example
-![128px](GAN-Vehicles/images/128pxDEMO.png)
+### 128x128 pixel output example
+![128px](images/128pxDEMO.png)
 
 In the table above, a visible vehicle outline begins
 to appear at epoch 190, however the model begins
@@ -113,9 +113,20 @@ lower quality images than before.
 
 ## Conclusion
 
-TODO
+The initial goal was to develop a GAN that takes in
+real vehicle images and outputs realistic generated
+images. The final output images in 64x64px, 96x96px, 
+and 128x128px resolutions resulted in somewhat 
+blurry and distorted yet still recognizable images 
+of various vehicle front ends.
 
-## References
-
-TODO
+Imperfect image quality was also likely as result of a
+relatively small dataset (1324 images), paired with
+some inconsistent image backgrounds and angles.
+Testing the same GAN on a larger and more uniform
+dataset would have likely resulted in improved image
+quality. The long model run time even with GPU
+acceleration limited the total number of model runs
+but the final model iterations still resulted in good
+output that is relatively recognizable.
 
