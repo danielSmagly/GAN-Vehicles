@@ -81,12 +81,6 @@ resolutions as well as model characteristics, and the
 model effectiveness was determined based on how
 closely output images resemble some real images.
 
-Based on the table above, the results show a steady
-improvement from epochs 1-300, with a distinct
-front windshield and grille becoming visible. The
-GAN appears to become stagnant after this, with
-the final 200 epochs making little visible progress.
-
 ### 64x64 pixel output example
 ![64px](images/64pxDEMO.png)
 
